@@ -13,3 +13,6 @@ new BarcodeReader("LICENSE-KEY");
 - [Command Line](command-line/README.md)
 - [GUI](gui/README.md)
 - [Web](web/README.md)
+
+## Blog
+[How to Integrate Java Barcode SDK to Command-Line, GUI and Web Apps](https://www.codepool.biz/java-barcode-command-line-gui-web.html)
