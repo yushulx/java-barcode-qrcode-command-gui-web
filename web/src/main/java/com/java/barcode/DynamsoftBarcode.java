@@ -1,7 +1,6 @@
 package com.java.barcode;
 
-import com.dynamsoft.barcode.BarcodeReader;
-import com.dynamsoft.barcode.TextResult;
+import com.dynamsoft.dbr.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -23,8 +22,9 @@ public class DynamsoftBarcode {
         try {
             LOG.info("Decoding barcodes...");
 
+            // Get a license key from https://www.dynamsoft.com/customer/license/trialLicense?product=dbr
+            BarcodeReader.initLicense("LICENSE-KEY");
             BarcodeReader barcodeReader = new BarcodeReader();
-            barcodeReader.initLicense(license);
             TextResult[] results = barcodeReader.decodeFileInMemory(is, "");
             String[] allResults = null, allFormats = null;
             if (results != null) {

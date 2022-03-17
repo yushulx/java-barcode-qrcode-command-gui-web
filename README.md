@@ -1,12 +1,36 @@
-# Java Barcode Reader: Command Line, GUI and Web
+# Java Barcode and QR Code Reader: Command Line, GUI and Web
 
-The repository contains three samples (command line, GUI, and web), showing how to implement Java barcode reader using [ZXing](https://github.com/zxing/zxing) and [Dynamsoft Barcode Reader](https://www.dynamsoft.com/Products/Dynamic-Barcode-Reader.aspx).
+The repository contains three samples (command line, GUI, and web), showing how to implement Java barcode and QR code reader using [ZXing](https://github.com/zxing/zxing) and [Dynamsoft Barcode Reader](https://www.dynamsoft.com/barcode-reader/sdk-desktop-server/).
 
-## Requirements
-Get a [trial license](https://www.dynamsoft.com/CustomerPortal/Portal/Triallicense.aspx) of Dynamsoft Barcode Reader and update the following Java code:
+## Install ZXing and Dynamsoft Barcode Reader
+Configure `pom.xml` file in Maven project:
 
+```xml
+<repositories>
+<repository>
+    <id>dbr</id>
+    <url>https://download2.dynamsoft.com/maven/dbr/jar</url>
+</repository>
+</repositories>
+<dependencies>
+<dependency>
+    <groupId>com.dynamsoft</groupId>
+    <artifactId>dbr</artifactId>
+    <version>9.0.0</version>
+</dependency>
+<dependency>
+    <groupId>com.google.zxing</groupId>
+    <artifactId>core</artifactId>
+    <version>3.4.0</version>
+</dependency>
 ```
-new BarcodeReader("LICENSE-KEY");
+
+## License Activation
+Get a valid [license key](https://www.dynamsoft.com/customer/license/trialLicense?product=dbr) of Dynamsoft Barcode Reader and update the following Java code:
+
+```java
+BarcodeReader.initLicense("LICENSE-KEY");
+BarcodeReader br = new BarcodeReader();
 ```
 
 ## Usage

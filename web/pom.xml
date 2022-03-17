@@ -18,7 +18,7 @@
 
     <properties>
         <java.version>8</java.version>
-        <dynamsoft-dbr.version>7.3</dynamsoft-dbr.version>
+        <dynamsoft-dbr.version>9.0.0</dynamsoft-dbr.version>
         <springdoc-openapi.version>1.1.45</springdoc-openapi.version>
     </properties>
 
@@ -71,7 +71,7 @@
     <repositories>
         <repository>
             <id>dbr</id>
-            <url>https://download.dynamsoft.com/maven/dbr/jar</url>
+            <url>https://download2.dynamsoft.com/maven/dbr/jar</url>
         </repository>
     </repositories>
 

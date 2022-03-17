@@ -1,6 +1,6 @@
 package com.java.barcode;
 
-import com.dynamsoft.barcode.*;
+import com.dynamsoft.dbr.*;
 import com.google.zxing.BinaryBitmap;
 import com.google.zxing.MultiFormatReader;
 import com.google.zxing.NotFoundException;
@@ -55,8 +55,9 @@ public class App
         // Dynamsoft
         BarcodeReader br = null;
         try {
-            // Get license from https://www.dynamsoft.com/CustomerPortal/Portal/Triallicense.aspx
-            br = new BarcodeReader("LICENSE-KEY");
+            // Get a license key from https://www.dynamsoft.com/customer/license/trialLicense?product=dbr
+            BarcodeReader.initLicense("LICENSE-KEY");
+            br = new BarcodeReader();
         } catch (Exception e) {
             System.out.println(e);
             return;
